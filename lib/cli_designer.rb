@@ -30,5 +30,22 @@ class CLIDesigner
     puts ""       
   end
 
+  def ordered_list(array)
+    array.each.with_index(1) do |elem, i|
+      list_item("#{i}. #{elem}")
+    end
+  end
+
+  def unordered_list(array)
+    array.each.with_index(1) do |elem, i|
+      list_item("#{v_char} #{elem}")
+    end
+  end
+
+  def list_item(string)
+    puts " " * padding + string.ljust(0.5 * width)
+    divider
+  end
+
 
 end

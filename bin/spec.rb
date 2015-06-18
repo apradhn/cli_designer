@@ -16,3 +16,12 @@ puts cli_designer.divider
 
 puts "prints a header"
 puts cli_designer.header("CLI Designer")
+
+array = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon",
+"Charizard", "Squirtle", "Wartortle", "Blastoise"]
+
+puts "prints an ordered list"
+cli_designer.ordered_list(array)
+
+puts "prints an unordered list"
+cli_designer.unordered_list(array)
