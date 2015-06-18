@@ -25,3 +25,18 @@ cli_designer.ordered_list(array)
 
 puts "prints an unordered list"
 cli_designer.unordered_list(array)
+
+movie_json = {
+  "Title" => "Raiders of the Lost Ark",
+  "Year" => "1981",
+  "Rated" => "PG", 
+  "Released" => "12 June 1981",
+  "Runtime" => "115 min",
+  "Genre" => "Action, Adventure",
+  "Director" => "Steven Spielberg",
+  "Plot"  => "Archaeologist and adventurer Indiana Jones is hired by the US government to find the Ark of the Covenant before the Nazis.",
+  "tomatoRating" => "9.1",
+  "tomatoConsensus" => "Featuring bravura set pieces, sly humor, and white-knuckle action, Raiders of the Lost Ark is one of the most consummately entertaining adventure pictures of all time."
+}
+
+cli_designer.json(movie_json)

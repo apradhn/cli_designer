@@ -23,9 +23,6 @@ class CLIDesigner
         puts " " * padding + v_char + " " * (width-2) + v_char
       end
     end
-    # puts " " * padding + char + " " * (width-2) + char
-    # puts " " * padding + char + message.center(width-2) + char
-    # puts " " * padding + char + " " * (width-2) + char   
     divider 
     puts ""       
   end
@@ -47,5 +44,25 @@ class CLIDesigner
     divider
   end
 
+  def json(hash)
+    hash.each do |key, value|
+      divider
+      center_title(key)
+      divider
+      puts parse_text(value)
+    end
+  end
 
+  def center_title(string)
+    puts " " * padding + string.center(width-2) + " " * padding
+  end
+
+  def parse_text(text)
+    text = " " * padding + text
+    line_count = text.length / width
+    line_count.times do |i| 
+      text.insert(width * (i+1), "\n" + " " * padding)
+    end
+    text    
+  end
 end
